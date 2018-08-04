@@ -7,9 +7,9 @@ import Hello from './containers/Hello';
 import './index.css';
 import { enthusiasm } from './reducers';
 import registerServiceWorker from './registerServiceWorker';
-import { StoreState } from './types';
+import { IStoreState } from './types';
 
-const store = createStore<StoreState, EnthusiasmAction, any, any>(enthusiasm, {
+const store = createStore<IStoreState, EnthusiasmAction, any, any>(enthusiasm, {
   enthusiasmLevel: 1,
   languageName: 'Typescript',
 });

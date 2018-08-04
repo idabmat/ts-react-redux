@@ -1,15 +1,15 @@
 import { enthusiasm } from '.';
-import { incrementEnthusiasm, decrementEnthusiasm } from '../actions';
+import { decrementEnthusiasm, incrementEnthusiasm } from '../actions';
 
 it('increases the enthusiasm level', () => {
   const input = {
+    enthusiasmLevel: 2,
     languageName: 'JS',
-    enthusiasmLevel: 2
   }
 
   const output = {
+    enthusiasmLevel: 3,
     languageName: 'JS',
-    enthusiasmLevel: 3
   }
 
   expect(enthusiasm(input, incrementEnthusiasm())).toEqual(output);
@@ -17,13 +17,13 @@ it('increases the enthusiasm level', () => {
 
 it('decreases the enthusiasm level', () => {
   const input = {
+    enthusiasmLevel: 2,
     languageName: 'JS',
-    enthusiasmLevel: 2
   }
 
   const output = {
+    enthusiasmLevel: 1,
     languageName: 'JS',
-    enthusiasmLevel: 1
   }
 
   expect(enthusiasm(input, decrementEnthusiasm())).toEqual(output);
@@ -31,8 +31,8 @@ it('decreases the enthusiasm level', () => {
 
 it('does not decreases enthusiasm level below 1', () => {
   const input = {
+    enthusiasmLevel: 1,
     languageName: 'JS',
-    enthusiasmLevel: 1
   }
 
   expect(enthusiasm(input, decrementEnthusiasm())).toEqual(input);

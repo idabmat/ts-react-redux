@@ -1,5 +1,5 @@
 import { enthusiasm } from '.';
-import { incrementEnthusiasm, decrementEnthusiasm } from '../actions';
+import { decrementEnthusiasm, incrementEnthusiasm } from '../actions';
 
 it('increases the enthusiasm level', () => {
   const input = {
